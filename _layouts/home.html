@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 {% css_asset_tag global %}
 - /_assets/_sass/base.scss
 - /_assets/_sass/syntax.css
 {% endcss_asset_tag %}
 
-    </head>
-    <body>
+  </head>
+  <body>
+  <nav>
+    <ul>
+      <li><a href="/">Lyza</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+       {{ content }}
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
-    </body>
+  <footer>
+    <div><h4>Find Me</h4>
+      <ul>
+        <li><a href="http://twitter.com/lyzadanger">@lyzadanger</a></li>
+        <li><a href="https://github.com/lyzadanger">lyzadanger on github</a></li>
+        <li><a href="http://www.flickr.com/photos/lyza">Flickr</a></li>
+      </ul>
+    </div>
+  </footer>
+  </body>
 </html>
