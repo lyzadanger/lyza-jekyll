@@ -4,3 +4,5 @@ pygments: true
 exclude: 
   - Gemfile
   - Gemfile.lock
+  - tasks
+  - README.md
