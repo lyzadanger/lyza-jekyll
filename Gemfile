@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'jekyll'
+gem 'jekyll-asset-pipeline'
+gem 'sass', '>=3.2.8'
+gem 'compass'
