@@ -3,32 +3,61 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | Lyza.com</title>
     <meta name="viewport" content="width=device-width">
-{% css_asset_tag global %}
-- /_assets/_sass/base.scss
-- /_assets/_sass/syntax.css
-{% endcss_asset_tag %}
+
+    <style>
+    body {
+      font-size: 100%;
+      font-family: 'Adobe Caslon Pro', 'Adobe Caslon', 'Caslon', 'Georgia', 'Times New Roman', serif;
+      text-transform: lowercase;
+      font-variant: small-caps;
+      color: #111;
+    }
+    h1 {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: red;
+      text-decoration: none;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      display: inline;
+      list-style-type: none;
+      padding-right: 0.5em;
+      padding-left: .25em;
+    }
+    div
+    {
+      background: red;
+      bottom: 0;
+      height: 2em;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 30em;
+    }
+    footer {
+      background: #111;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: white;
+
+    }
+    </style>
 
   </head>
   <body>
-  <nav>
-    <ul>
-      <li><a href="/">Lyza</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
-       {{ content }}
-
-  <footer>
-    <div><h4>Find Me</h4>
-      <ul>
-        <li><a href="http://twitter.com/lyzadanger">@lyzadanger</a></li>
-        <li><a href="https://github.com/lyzadanger">lyzadanger on github</a></li>
-        <li><a href="http://www.flickr.com/photos/lyza">Flickr</a></li>
-      </ul>
-    </div>
-  </footer>
+    <div>{{content}}</div>
+    <footer>The Time-boxed website // build I </footer>
   </body>
 </html>

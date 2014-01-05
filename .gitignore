@@ -1,4 +1,7 @@
 _site
 .sass-cache/*
+.htaccess
+sftp-config.json
 Gemfile.lock
 tasks/deploy
+*.DS_Store

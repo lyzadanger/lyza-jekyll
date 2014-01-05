@@ -1,5 +1,7 @@
 name: Your New Jekyll Site
-markdown: redcarpet
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
 pygments: true
 exclude: 
   - Gemfile
