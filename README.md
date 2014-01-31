@@ -12,3 +12,10 @@ Serve locally and watch for changes/rebuild:
 
     $ ./tasks/deploy
 
+### Components
+
+(Notes to self, mostly)
+
+#### Grunt
+
+I used `grunt-init` with the basic [gruntfile](https://github.com/gruntjs/grunt-init-gruntfile) template to init my Grunt setup.

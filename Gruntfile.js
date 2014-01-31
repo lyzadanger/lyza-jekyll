@@ -1,4 +1,5 @@
 /*global module:false*/
+var phantom = require('phantom');
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -65,17 +66,36 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test', 'qunit']
       }
+    },
+    jekyll: { // https://github.com/dannygarcia/grunt-jekyll, https://gist.github.com/dannygarcia/3753650
+      server : { // Just build for now, no serving or watching
+        serve : false
+      }
+    },
+    connect: {
+        server: {
+          options: {
+            port: 9001,
+            base: '_site',
+            keepalive: true
+          }
+        }
     }
   });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  //grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('default', function() {
+    grunt.task.run(['jekyll:server', 'connect:server']);
+  });
 
 };
