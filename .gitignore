@@ -5,3 +5,4 @@ sftp-config.json
 Gemfile.lock
 tasks/deploy
 *.DS_Store
+node_modules

@@ -8,3 +8,7 @@ exclude:
   - Gemfile.lock
   - tasks
   - README.md
+  - node_modules
+  - Gruntfile.js
+  - package.json
+  - sftp-config.json
