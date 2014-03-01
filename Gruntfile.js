@@ -98,4 +98,20 @@ module.exports = function(grunt) {
     grunt.task.run(['jekyll:server', 'connect:server']);
   });
 
+  // Scratch for phantom
+  // https://github.com/alexscheelmeyer/node-phantom/blob/master/test/
+  // http://phantomjs.org/api/webpage/
+  // https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage
+  grunt.registerTask('changelog', function() {
+    // Generate a new .md post file: https://npmjs.org/package/grunt-template
+    // Put it in 
+    // How to determine naming? 
+    // Spawn phantom
+    // Get screenshots of [what?] at at least three different breakpoints (maybe randomized)
+    // Save these to images/changelog? 
+    // Generate new .md file in changelog (same naming)
+    // Uset template?
+    // Set front matter appopriately
+  });
+
 };
